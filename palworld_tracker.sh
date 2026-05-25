@@ -12,9 +12,8 @@ for pid in $(pgrep -f palworld_tracker.sh); do
     fi
 done
 
-# CLEAN RESET
+# CLEAN RESET (Only clear the temporary payload, KEEP the message ID)
 rm -f "payload.json"
-rm -f "$MSG_ID_FILE"
 
 echo "--- Palworld RCON Tracker Started: $(date) ---" > tracker_debug.log
 
